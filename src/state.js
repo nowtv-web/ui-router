@@ -703,7 +703,7 @@ function $StateProvider(   $urlRouterProvider,   $urlMatcherFactory,           $
         }
 
         if (options.notify) {
-          $rootScope.$broadcast('$stateChangeSuccess', to.self, toParams, from.self, fromParams, toResolved);
+          $rootScope.$broadcast('$stateChangeSuccess', to.self, toParams, toResolved, from.self, fromParams);
         }
         currentLocation = $location.url();
 
